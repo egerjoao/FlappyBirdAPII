@@ -6,9 +6,12 @@ public class GameHandle : MonoBehaviour
 {
     [SerializeField] private GameObject canoPrefab;
     [SerializeField] private float tempoSpawn = 3f;
+    
+    [SerializeField] private float alturaMin = -2f;
+    [SerializeField] private float alturaMax = 2f;
+
     private float tempoAtualSpawn = 0f;
 
-    // Update is called once per frame
     void Update()
     {
         TrySpawn();
@@ -16,11 +19,14 @@ public class GameHandle : MonoBehaviour
 
     private void TrySpawn()
     {
-        tempoAtualSpawn-=Time.deltaTime;
+        tempoAtualSpawn -= Time.deltaTime;
         if (tempoAtualSpawn > 0) return;
+
+        float alturaAleatoria = Random.Range(alturaMin, alturaMax);
+        Vector3 posicaoSpawn = new Vector3(8, alturaAleatoria, 0);
+
+        var novoCano = Instantiate(canoPrefab, posicaoSpawn, Quaternion.identity);
         
-        var novoCano = Instantiate(canoPrefab);
-        novoCano.transform.position = new Vector3(8, 0, 0);
         tempoAtualSpawn = tempoSpawn;
     }
 }
