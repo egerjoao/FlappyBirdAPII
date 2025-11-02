@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameHandle : MonoBehaviour
 {
@@ -16,10 +17,18 @@ public class GameHandle : MonoBehaviour
     [SerializeField] private float aberturaMinima = 2.5f; 
     [SerializeField] private float tempoParaAberturaMinima = 60f; 
 
+    [Header("Configuração de UI")]
+    [SerializeField] private GameObject telaGameOverUI;
+
     private float tempoAtualSpawn = 0f;
 
     void Update()
     {
+        if (telaGameOverUI != null && telaGameOverUI.activeInHierarchy)
+        {
+            return;
+        }
+
         TrySpawn();
     }
 
@@ -28,26 +37,41 @@ public class GameHandle : MonoBehaviour
         tempoAtualSpawn -= Time.deltaTime;
         if (tempoAtualSpawn > 0) return;
 
-        // CALCULA A ABERTURA 
-        
         float tempoDecorrido = Time.timeSinceLevelLoad; 
-
         float tempoNormalizado = Mathf.Clamp01(tempoDecorrido / tempoParaAberturaMinima);
-
         float aberturaAtual = Mathf.Lerp(aberturaInicial, aberturaMinima, tempoNormalizado);
-
         float alturaAleatoria = Random.Range(alturaMin, alturaMax);
-        Vector3 posicaoSpawn = new Vector3(8, alturaAleatoria, 0); // Posição X = 8 (fora da tela)
+        
+        Vector3 posicaoSpawn = new Vector3(8, alturaAleatoria, 0);
 
         GameObject novoCanoObj = Instantiate(canoPrefab, posicaoSpawn, Quaternion.identity);
         
         ConfiguracaoCano config = novoCanoObj.GetComponent<ConfiguracaoCano>();
-
         if (config != null)
         {
             config.DefinirAbertura(aberturaAtual);
         }
         
         tempoAtualSpawn = tempoSpawn;
+    }
+
+    /// <summary>
+    /// </summary>
+    public void GameOver()
+    {
+        if (telaGameOverUI != null)
+        {
+            telaGameOverUI.SetActive(true);
+        }
+
+        Time.timeScale = 0f; 
+    }
+
+    /// <summary>
+    /// </summary>
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
