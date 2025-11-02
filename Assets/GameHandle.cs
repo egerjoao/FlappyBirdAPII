@@ -65,8 +65,13 @@ public class GameHandle : MonoBehaviour
         }
 
         Time.timeScale = 0f; 
+        
+        if (Score.instance != null)
+        {
+            Score.instance.ExibirResultadosFinais();
+        }
     }
-
+ 
     /// <summary>
     /// </summary>
     public void RestartGame()

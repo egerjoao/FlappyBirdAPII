@@ -665,7 +665,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atualScoreText: {fileID: 1503212408}
+  finalScoreText: {fileID: 0}
   highScoreText: {fileID: 1753539842}
+  medalhaImage: {fileID: 1002392426}
+  prataScore: 1
+  ouroScore: 5
+  prataSprite: {fileID: 454788780, guid: b837d24903f86514aabd5d2abee7e950, type: 3}
+  ouroSprite: {fileID: -967350793, guid: b837d24903f86514aabd5d2abee7e950, type: 3}
 --- !u!114 &818982813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,6 +891,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832049271}
+  m_CullTransparentMesh: 1
+--- !u!1 &1002392424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002392425}
+  - component: {fileID: 1002392427}
+  - component: {fileID: 1002392426}
+  m_Layer: 5
+  m_Name: medalhaimage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1002392425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002392424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1817248861}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -136, y: -20}
+  m_SizeDelta: {x: 91.66667, y: 91.66667}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1002392426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002392424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1002392427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002392424}
   m_CullTransparentMesh: 1
 --- !u!1 &1175502756
 GameObject:
@@ -1870,6 +1952,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 832049272}
+  - {fileID: 1002392425}
   m_Father: {fileID: 171101061}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1951,7 +2034,7 @@ MonoBehaviour:
   alturaMax: 2
   aberturaInicial: 5
   aberturaMinima: 2.5
-  tempoParaAberturaMinima: 10
+  tempoParaAberturaMinima: 90
   telaGameOverUI: {fileID: 1817248860}
 --- !u!4 &2051177462
 Transform:
