@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 377902415819903839}
   - component: {fileID: 8628390702774718559}
   - component: {fileID: 1710029726895171098}
+  - component: {fileID: 7564609211956054246}
   m_Layer: 0
   m_Name: canos
   m_TagString: Untagged
@@ -87,6 +88,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975cd17663873b141997dba839e72114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7564609211956054246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886969313709387330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49e73ede640e614391f3a448814b8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canoCima: {fileID: 809743232873162116}
+  canoBaixo: {fileID: 3297930509432279869}
+  alturaDoCollider: 10
 --- !u!1 &6067735793200399585
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +128,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6067735793200399585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -4.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
