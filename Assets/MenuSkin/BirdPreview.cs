@@ -1,16 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BirdPreview : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spriteRenderer; // sprite que mostra a skin
-    [SerializeField] private Sprite[] skins; // array de sprites das skins
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] skins;
     private int currentIndex = 0;
 
-    private void Start()
+    void Start()
     {
-        if (skins.Length > 0)
-            UpdatePreview();
+        UpdatePreview();
     }
 
     public void NextSkin()
@@ -27,13 +25,21 @@ public class BirdPreview : MonoBehaviour
         UpdatePreview();
     }
 
+    private void UpdatePreview()
+    {
+        if (spriteRenderer != null && skins.Length > 0)
+        {
+            spriteRenderer.sprite = skins[currentIndex];
+        }
+        else
+        {
+            Debug.LogWarning("SpriteRenderer ou skins não atribuídos!");
+        }
+    }
+
+    // 👇 ADICIONE ESTA FUNÇÃO AQUI
     public int GetCurrentIndex()
     {
         return currentIndex;
-    }
-
-    private void UpdatePreview()
-    {
-        spriteRenderer.sprite = skins[currentIndex];
     }
 }
