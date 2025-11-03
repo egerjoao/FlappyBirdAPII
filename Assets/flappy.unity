@@ -332,6 +332,7 @@ MonoBehaviour:
   _rb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
+  gameHandle: {fileID: 0}
   skins: []
 --- !u!212 &367891995
 SpriteRenderer:
