@@ -329,7 +329,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 5
   teto: {fileID: 156501129}
-  gameHandle: {fileID: 2051177461}
+  _rb2D: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+  skins: []
 --- !u!212 &367891995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1961,6 +1964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aguiaPrefab: {fileID: 82456972698055033, guid: a67a554a1012a324280a6f296fa9b372, type: 3}
+  avisoPrefab: {fileID: 1819542697201647852, guid: 00500d7415fad404493e7cca05b4e71d, type: 3}
+  tempoAviso: 1
   tempoSpawnInicial: 5
   tempoSpawnMinimo: 1.5
   tempoParaDificuldadeMax: 60
