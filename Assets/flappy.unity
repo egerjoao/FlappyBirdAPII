@@ -2077,7 +2077,7 @@ PrefabInstance:
       objectReference: {fileID: 832740867}
     - target: {fileID: 7196690567921753695, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
       propertyPath: skins.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7196690567921753695, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
       propertyPath: skins.Array.data[0]
@@ -2091,5 +2091,17 @@ PrefabInstance:
       propertyPath: skins.Array.data[2]
       value: 
       objectReference: {fileID: 9100000, guid: 0aaa15bda49479b438ea14dbf5656d04, type: 2}
+    - target: {fileID: 7196690567921753695, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
+      propertyPath: skins.Array.data[3]
+      value: 
+      objectReference: {fileID: 9100000, guid: a7842d7930f7c26439f3ea655ee76530, type: 2}
+    - target: {fileID: 7196690567921753695, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
+      propertyPath: skins.Array.data[4]
+      value: 
+      objectReference: {fileID: 9100000, guid: c4c94f9f5715f0941b70b38fbda17ad1, type: 2}
+    - target: {fileID: 7196690567921753695, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
+      propertyPath: skins.Array.data[5]
+      value: 
+      objectReference: {fileID: 9100000, guid: dde6ffefb32a05446878b74170ef06fe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b22d1f0b8e42f34db6643a65b5407af, type: 3}
