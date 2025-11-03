@@ -67,12 +67,21 @@ public class GameHandle : MonoBehaviour
         Time.timeScale = 0f; 
 
     }
- 
-    /// <summary>
-    /// </summary>
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+
+    /// <summary>
+        /// </summary>
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    /// <summary>
+    /// </summary>
+    public void VoltarAoMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("MenuScene");
+    }
 }
