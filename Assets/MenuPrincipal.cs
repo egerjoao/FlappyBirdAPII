@@ -7,7 +7,8 @@ public class MenuPrincipal : MonoBehaviour
 {
 
     [SerializeField] private string nomeDaCenaDoJogo = "flappy"; 
-    [SerializeField] private string nomeDaCenaDeSkins = "SkinsScene"; 
+    [SerializeField] private string nomeDaCenaDeSkins = "MenuSkins"; 
+    [SerializeField] private string nomeDaCenaPrincipal = "MenuPrincipal";
 
     /// <summary>
     /// </summary>
@@ -21,6 +22,11 @@ public class MenuPrincipal : MonoBehaviour
     public void AbrirSkins()
     {
         SceneManager.LoadScene(nomeDaCenaDeSkins);
+    }
+
+    public void VoltarAoMenu()
+    {
+        SceneManager.LoadScene(nomeDaCenaPrincipal);
     }
 
     /// <summary>

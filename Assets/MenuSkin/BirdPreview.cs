@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BirdPreview : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] skins;
+    public Animator animator;  // Substitui o SpriteRenderer
+    public RuntimeAnimatorController[] skins; // Array de animações
     private int currentIndex = 0;
 
     void Start()
@@ -27,17 +27,16 @@ public class BirdPreview : MonoBehaviour
 
     private void UpdatePreview()
     {
-        if (spriteRenderer != null && skins.Length > 0)
+        if (animator != null && skins.Length > 0)
         {
-            spriteRenderer.sprite = skins[currentIndex];
+            animator.runtimeAnimatorController = skins[currentIndex];
         }
         else
         {
-            Debug.LogWarning("SpriteRenderer ou skins não atribuídos!");
+            Debug.LogWarning("Animator ou skins não atribuídos!");
         }
     }
 
-    // 👇 ADICIONE ESTA FUNÇÃO AQUI
     public int GetCurrentIndex()
     {
         return currentIndex;

@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3fbeacb6c7f9648b26aa1ff4dde538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  birdPreview: {fileID: 0}
 --- !u!4 &743835685
 Transform:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCenaDoJogo: flappy
-  nomeDaCenaDeSkins: SkinsScene
+  nomeDaCenaDeSkins: MenuSkins
 --- !u!4 &1088819431
 Transform:
   m_ObjectHideFlags: 0
@@ -994,7 +995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579998127
 GameObject:
@@ -1403,7 +1404,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1889358155
 GameObject:
