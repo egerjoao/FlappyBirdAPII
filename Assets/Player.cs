@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 [SerializeField] private Rigidbody2D _rb2D;
 [SerializeField] private SpriteRenderer spriteRenderer;
 [SerializeField] private Animator animator;
+[SerializeField] private GameHandle gameHandle; 
 
 [Header("Skins")]
 [SerializeField] private Sprite[] skins;
@@ -18,75 +19,83 @@ private bool isDead = false;
 
 private void Awake()
 {
-    if (_rb2D == null) _rb2D = GetComponent<Rigidbody2D>();
-    if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-    if (animator == null) animator = GetComponent<Animator>();
+    if (_rb2D == null) _rb2D = GetComponent<Rigidbody2D>();
+    if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+    if (animator == null) animator = GetComponent<Animator>();
+
+    if (gameHandle == null)
+    {
+        Debug.LogError("O GameHandle NÃO FOI CONECTADO no Inspetor do Player!");
+    }
 }
 
 private void Start()
 {
-    if (skins.Length > 0)
-    {
-        SetSkin(0); // Skin inicial (pode mudar para qualquer índice)
-    }
+    if (skins.Length > 0)
+    {
+        SetSkin(0);
+    }
 }
 
 private void Update()
 {
-    if (isDead) return;
+    if (isDead) return;
 
-    Pular();
-    ChecarTeto();
+    Pular();
+    ChecarTeto();
 }
 
 private void Pular()
 {
-    if (Input.GetKeyDown(KeyCode.Space))
-    {
-        _rb2D.velocity = Vector2.up * jumpSpeed;
-    }
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        _rb2D.velocity = Vector2.up * jumpSpeed;
+    }
 }
 
 private void ChecarTeto()
 {
-    if (transform.position.y > teto.position.y)
-    {
-        GameOver();
-    }
+    if (transform.position.y > teto.position.y)
+    {
+        GameOver();
+    }
 }
 
 private void OnCollisionEnter2D(Collision2D collision)
 {
-    GameOver();
+    GameOver();
 }
 
 public void GameOver()
 {
-    if (isDead) return;
-    isDead = true;
-    animator.SetBool("isDead", true);
+    if (isDead) return;
+    isDead = true;
+    animator.SetBool("isDead", true);
+
+    if (gameHandle != null)
+    {
+        gameHandle.GameOver();
+    }
 }
 
 /// <summary>
-/// Troca a skin do Player. Pode ser chamada de outro script (menu ou teste).
 /// </summary>
-/// <param name="index">Índice do sprite no array de skins.</param>
 public void SetSkin(int index)
 {
-    if (skins == null || skins.Length == 0)
-    {
-        Debug.LogWarning("Array de skins vazio!");
-        return;
-    }
+    if (skins == null || skins.Length == 0)
+    {
+        Debug.LogWarning("Array de skins vazio!");
+        return;
+    }
 
-    if (index < 0 || index >= skins.Length)
-    {
-        Debug.LogWarning("Índice de skin inválido!");
-        return;
-    }
+    if (index < 0 || index >= skins.Length)
+    {
+        Debug.LogWarning("Índice de skin inválido!");
+        return;
+    }
 
-    spriteRenderer.sprite = skins[index];
-    animator.Rebind(); // Reinicia a animação com o novo sprite
+    spriteRenderer.sprite = skins[index];
+    animator.Rebind();
 }
 
 }

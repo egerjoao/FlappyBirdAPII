@@ -1916,6 +1916,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817248860}
   m_CullTransparentMesh: 1
+--- !u!1 &1910103092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910103093}
+  - component: {fileID: 1910103094}
+  m_Layer: 0
+  m_Name: GeradorAguia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910103093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910103092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11286229, y: 1.0038699, z: 0.04742807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910103094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910103092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ecb5ec33dd7e42bbbe3026434bcaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aguiaPrefab: {fileID: 82456972698055033, guid: a67a554a1012a324280a6f296fa9b372, type: 3}
+  tempoSpawnInicial: 5
+  tempoSpawnMinimo: 1.5
+  tempoParaDificuldadeMax: 60
+  alturaMin: -2
+  alturaMax: 2
+  velocidadeInicial: 10
+  velocidadeMaxima: 20
+  scoreMinimo: 1
 --- !u!1 &2051177460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,11 +2000,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canoPrefab: {fileID: 1886969313709387330, guid: b1d3e22231738fd48a375c9b06bd9b93, type: 3}
   tempoSpawn: 3
-  alturaMin: -2
+  alturaMin: 0
   alturaMax: 2
   aberturaInicial: 5
   aberturaMinima: 2.5
-  tempoParaAberturaMinima: 10
+  tempoParaAberturaMinima: 60
   telaGameOverUI: {fileID: 1817248860}
 --- !u!4 &2051177462
 Transform:
