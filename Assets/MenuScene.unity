@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 309, y: -374}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 344, y: -374}
+  m_SizeDelta: {x: 174.1091, y: 92.0799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76726119
 MonoBehaviour:
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 568828973, guid: 8d7c3c09867eaec4cb4a4333b5ed0e8c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPreview: {fileID: 0}
+  nomeCenaMenuPrincipal: MenuScene
 --- !u!4 &743835685
 Transform:
   m_ObjectHideFlags: 0
@@ -657,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomeDaCenaDoJogo: flappy
   nomeDaCenaDeSkins: MenuSkins
+  nomeDaCenaPrincipal: MenuPrincipal
 --- !u!4 &1088819431
 Transform:
   m_ObjectHideFlags: 0
@@ -1168,8 +1170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: -374}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -344, y: -374}
+  m_SizeDelta: {x: 174.1091, y: 92.0799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877833182
 MonoBehaviour:
@@ -1247,8 +1249,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 923799078, guid: 8d7c3c09867eaec4cb4a4333b5ed0e8c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
